@@ -13,8 +13,64 @@ const directionEnum = {
 var boatCargo = null;
 var boatDirection = directionEnum.LEFT;
 
+var isGameOver = true;
+
 function initGame() {
     console.log("init game...");
+
+    let resetBtn = document.getElementById("btn-reset");
+    resetBtn.onclick = this.resetGame.bind(this);
+
+    resetGame();
+}
+
+function resetGame() {
+    //boat stuff
+    boatDirection = directionEnum.LEFT;
+    let imgBoat = document.getElementById("boatman");
+    imgBoat.style.display = "block";
+    imgBoat.style.left = "200px";
+    imgBoat.style.transform = " scaleX(1)";
+
+    //boat cargo stuff
+    boatCargo = null;
+    let imgCargo = document.getElementById("boat-cargo");
+    imgCargo.setAttribute("src", "");
+    imgCargo.style.left = "200px";
+    imgCargo.style.transform = " scaleX(-1)";
+
+    //show land-left stuff
+    document.getElementById("left-wolf").style.display = "block";
+    document.getElementById("left-goat").style.display = "block";
+    document.getElementById("left-cabbage").style.display = "block";
+
+    //hide land-right stuff
+    document.getElementById("right-wolf").style.display = "none";
+    document.getElementById("right-goat").style.display = "none";
+    document.getElementById("right-cabbage").style.display = "none";
+
+    let imgLand = document.getElementById("land");
+    imgLand.src = "img/land.png";
+
+    isGameOver = false;
+}
+
+/**
+ * Activate gameover screen and disable game.
+ */
+function gameOver() {
+    isGameOver = true;
+
+    let imgLand = document.getElementById("land");
+    imgLand.src = "img/gameover.png";
+
+    document.getElementById("boatman").style.display = "none";
+    document.getElementById("boat-cargo").style.display = "none";
+
+    //hide land-left stuff
+    document.getElementById("left-wolf").style.display = "none";
+    document.getElementById("left-goat").style.display = "none";
+    document.getElementById("left-cabbage").style.display = "none";
 
     //hide land-right stuff
     document.getElementById("right-wolf").style.display = "none";
@@ -81,10 +137,10 @@ function clickedBoatMan() {
     let eatenMessage = checkEatingRules();
     if (eatenMessage != null) {
         alert(eatenMessage);
+        gameOver();
+        return;
     }
 
-    //TODO: end game
-    //TODO: reset
 }
 
 /**
@@ -92,9 +148,9 @@ function clickedBoatMan() {
  */
 function clickedBoatCargo() {
     placeThingOnLandFromBoat();
-    
+
     //check success
-    if(checkEverythingIsOnRightLand()){
+    if (checkEverythingIsOnRightLand()) {
         alert("Success!");
     }
 }
