@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wolf, Goat, Cabbage Problem</title>
+
+    <script src='js/game.js'></script>
 </head>
+
 <body>
-    
+    <h1>Wolf, Goat, Cabbage Problem</h1>
+    <p>
+        A classic conundrum.<br>
+        You have a wolf, a goat, one big cabbage, and boat.
+        You are trying to get to the other side of the river with everything.
+        However, there is a problem. You cannot leave certain elements alone.
+    </p>
+    <ul>
+        <li>The wolf will eat the goat.</li>
+        <li>The goat will eat the cabbage.</li>
+    </ul>
+    <p>
+        Click an item to take it on and off the boat.
+        Click the boat to move the boat.
+        Once a boat moves away, a rule will be applied.
+    </p>
+
+    <img id="land" src=img/land.png>
+
+    <div id="land-left">
+        <img id="left-1" src=img/cabbage.png>
+        <img id="left-2" src=img/goat.png>
+        <img id="left-3" src=img/wolf.png>
+    </div>
+    <div id="land-right">
+        <img id="right-1" src=img/cabbage.png>
+        <img id="right-2" src=img/goat.png>
+        <img id="right-3" src=img/wolf.png>
+    </div>
 </body>
+
 </html>
