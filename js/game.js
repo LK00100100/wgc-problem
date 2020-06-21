@@ -85,9 +85,6 @@ function clickedBoatMan() {
 
     //TODO: end game
     //TODO: reset
-
-
-
 }
 
 /**
@@ -95,6 +92,11 @@ function clickedBoatMan() {
  */
 function clickedBoatCargo() {
     placeThingOnLandFromBoat();
+    
+    //check success
+    if(checkEverythingIsOnRightLand()){
+        alert("Success!");
+    }
 }
 
 /**
@@ -135,18 +137,18 @@ function placeThingOnLandToBoat(direction, thing) {
     if (boatDirection != direction)
         return;
 
-    let landImg;
+    let landThingImg;
     if (direction == directionEnum.LEFT)
-        landImg = document.getElementById(`left-${thing}`);
+        landThingImg = document.getElementById(`left-${thing}`);
     else //right
-        landImg = document.getElementById(`right-${thing}`);
+        landThingImg = document.getElementById(`right-${thing}`);
 
     //thing isn't on land
-    if (landImg.style.display == "none")
+    if (landThingImg.style.display == "none")
         return;
 
     //empty land
-    landImg.style.display = "none";
+    landThingImg.style.display = "none";
 
     //place on boat
     boatCargo = thing;
@@ -196,4 +198,20 @@ function checkEatingRulesForOneLand(direction) {
         return "The goat has eaten the cabbage.";
 
     return null;
+}
+
+/**
+ * Are all the things on the right side?
+ * @returns {boolean} true on success. false otherwise.
+ */
+function checkEverythingIsOnRightLand() {
+    let imgWolf = document.getElementById(`right-${thingEnum.WOLF}`);
+    let imgGoat = document.getElementById(`right-${thingEnum.GOAT}`);
+    let imgCabbage = document.getElementById(`right-${thingEnum.CABBAGE}`);
+
+    let hasWolf = imgWolf.style.display == "none" ? false : true;
+    let hasGoat = imgGoat.style.display == "none" ? false : true;
+    let hasCabbage = imgCabbage.style.display == "none" ? false : true;
+
+    return hasWolf && hasGoat && hasCabbage;
 }
