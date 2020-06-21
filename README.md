@@ -1,5 +1,7 @@
 # Wolf, Goat, Cabbage Problem
-https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
+Play here: https://lk00100100.github.io/wgc-problem/
+
+Wiki: https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
 
 A classic conundrum.
 
