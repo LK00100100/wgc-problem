@@ -1,0 +1,59 @@
+#land {
+    left: 0px;
+    top: 0px;
+    position: relative;
+    z-index: -1;
+}
+
+#boatman {
+    left: 200px;
+    top: 130px;
+    position: absolute;
+    z-index: 1;
+}
+
+#boat-cargo {
+    left: 200px;
+    top: 130px;
+    position: absolute;
+    z-index: 2;
+}
+
+.thing {
+    position: absolute;
+    z-index: 2;
+}
+
+.thing-left {
+    left: 30px;
+}
+
+#left-wolf {
+    top: 30px;
+}
+
+#left-goat {
+    top: 178px;
+}
+
+#left-cabbage {
+    top: 326px;
+}
+
+.thing-right {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 850px;
+}
+
+#right-wolf {
+    top: 30px;
+}
+
+#right-goat {
+    top: 178px;
+}
+
+#right-cabbage {
+    top: 326px;
+}

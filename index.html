@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wolf, Goat, Cabbage Problem</title>
 
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
     <script src='js/game.js'></script>
 </head>
 
 <body>
+    <div id="game">
+        <img id="land" src=img/land.png>
+        <img id="boatman" src=img/boatman.png onClick="clickedBoatMan()">
+        <img id="boat-cargo" onClick="clickedBoatCargo()">
+
+        <img id="left-wolf" class="thing thing-left" src=img/wolf.png onClick="clickedLeftWolf()">
+        <img id="left-goat" class="thing thing-left" src=img/goat.png onClick="clickedLeftGoat()">
+        <img id="left-cabbage" class="thing thing-left" src=img/cabbage.png onClick="clickedLeftCabbage()">
+
+        <img id="right-wolf" class="thing thing-right" onClick="clickedRightWolf()">
+        <img id="right-goat" class="thing thing-right" onClick="clickedRightGoat()">
+        <img id="right-cabbage" class="thing thing-right" onClick="clickedRightCabbage()">
+    </div>
+
     <h1>Wolf, Goat, Cabbage Problem</h1>
     <p>
         A classic conundrum.<br>
@@ -23,22 +38,13 @@
     </ul>
     <p>
         Click an item to take it on and off the boat.
-        Click the boat to move the boat.
-        Once a boat moves away, a rule will be applied.
+        Click the boatman to move the boat.
+        Once the boat moves away, something may eat something.
     </p>
 
-    <img id="land" src=img/land.png>
-
-    <div id="land-left">
-        <img id="left-1" src=img/cabbage.png>
-        <img id="left-2" src=img/goat.png>
-        <img id="left-3" src=img/wolf.png>
-    </div>
-    <div id="land-right">
-        <img id="right-1" src=img/cabbage.png>
-        <img id="right-2" src=img/goat.png>
-        <img id="right-3" src=img/wolf.png>
-    </div>
+    <script>
+        initGame();
+    </script>
 </body>
 
 </html>
