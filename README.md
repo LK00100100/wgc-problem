@@ -7,10 +7,11 @@ Play here: https://lk00100100.github.io/wgc-problem/
 Wiki: https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
 
 ![alt text](https://raw.githubusercontent.com/LK00100100/wgc-problem/master/screenshot.png "Demo")
+
 A classic conundrum.
 
-You have a wolf, a goat, one big cabbage, and boat. You are trying to get to the other side of the river with everything.
-However, there is a problem. You cannot leave certain elements alone.
+You have a wolf, a goat, one big cabbage, and a boat. You are trying to get to the other side of the river with everything.
+However, there is a problem. You cannot leave certain elements alone unless the man is there. If you leave things alone without the man, they will eat each other.
 - The wolf will eat the goat.
 - The goat will eat the cabbage.
 
