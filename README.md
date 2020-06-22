@@ -1,8 +1,12 @@
 # Wolf, Goat, Cabbage Problem
+![GitHub](https://img.shields.io/github/license/LK00100100/wgc-problem.svg)
+![RepoSize](https://img.shields.io/github/repo-size/LK00100100/wgc-problem.svg)
+
 Play here: https://lk00100100.github.io/wgc-problem/
 
 Wiki: https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
 
+![alt text](https://raw.githubusercontent.com/LK00100100/wgc-problem/master/screenshot.png "Demo")
 A classic conundrum.
 
 You have a wolf, a goat, one big cabbage, and boat. You are trying to get to the other side of the river with everything.
